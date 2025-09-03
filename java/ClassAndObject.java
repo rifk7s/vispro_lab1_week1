@@ -1,11 +1,18 @@
-record Cigar(String model) {}
+class Car {
+    String brand;
+    
+    Car(String brand) {
+        this.brand = brand;
+    }
+    
+    void honk() {
+        System.out.println(brand + " says beep!");
+    }
+}
 
 public class ClassAndObject {
     public static void main(String[] args) {
-        Cigar cigar1 = new Cigar("Marlboro");
-        Cigar cigar2 = new Cigar("Dunhill");
-
-        System.out.println("Cigar brand 1: " + cigar1.model());
-        System.out.println("Cigar brand 2: " + cigar2.model());
+        var car = new Car("BMW");
+        car.honk();
     }
 }
