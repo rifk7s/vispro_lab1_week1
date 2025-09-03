@@ -1,27 +1,26 @@
-// Polymorphism example in Dart
-class Shape {
-  void draw() {
-    print('Drawing a shape');
+class Animal {
+  void sound() {
+    print('Animal sound');
   }
 }
 
-class Circle extends Shape {
+class Dog extends Animal {
   @override
-  void draw() {
-    print('Drawing a circle');
+  void sound() {
+    print('Woof');
   }
 }
 
-class Square extends Shape {
+class Cat extends Animal {
   @override
-  void draw() {
-    print('Drawing a square');
+  void sound() {
+    print('Meow');
   }
 }
 
 void main() {
-  List<Shape> shapes = [Circle(), Square()];
-  for (var shape in shapes) {
-    shape.draw();
+  List<Animal> animals = [Dog(), Cat()];
+  for (var animal in animals) {
+    animal.sound();
   }
 }

@@ -1,17 +1,19 @@
-class PolyAnimal {
+import java.util.List;
+
+class Animal {
     void sound() {
         System.out.println("Animal sound");
     }
 }
 
-class PolyDog extends PolyAnimal {
+class Dog extends Animal {
     @Override
     void sound() {
         System.out.println("Woof");
     }
 }
 
-class PolyCat extends PolyAnimal {
+class Cat extends Animal {
     @Override
     void sound() {
         System.out.println("Meow");
@@ -20,9 +22,9 @@ class PolyCat extends PolyAnimal {
 
 public class Polymorphism {
     public static void main(String[] args) {
-        PolyAnimal animal1 = new PolyDog();
-        PolyAnimal animal2 = new PolyCat();
-        animal1.sound();
-        animal2.sound();
+        List<Animal> animals = List.of(new Dog(), new Cat());
+        for (Animal animal : animals) {
+            animal.sound();
+        }
     }
 }

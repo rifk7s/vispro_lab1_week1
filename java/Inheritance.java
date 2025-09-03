@@ -1,10 +1,10 @@
-class InheritAnimal {
+class Animal {
     void eat() {
         System.out.println("Eating");
     }
 }
 
-class InheritDog extends InheritAnimal {
+class Dog extends Animal {
     void bark() {
         System.out.println("Barking");
     }
@@ -12,7 +12,7 @@ class InheritDog extends InheritAnimal {
 
 public class Inheritance {
     public static void main(String[] args) {
-        InheritDog dog = new InheritDog();
+        var dog = new Dog();
         dog.eat();
         dog.bark();
     }

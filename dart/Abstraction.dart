@@ -1,16 +1,15 @@
-// Abstraction example in Dart
 abstract class Animal {
-  void makeSound();
+  void sound();
 }
 
 class Dog extends Animal {
   @override
-  void makeSound() {
+  void sound() {
     print('Woof!');
   }
 }
 
 void main() {
-  Dog dog = Dog();
-  dog.makeSound();
+  var dog = Dog();
+  dog.sound();
 }

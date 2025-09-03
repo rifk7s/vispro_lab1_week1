@@ -1,27 +1,28 @@
-// Encapsulation example in Dart
-class BankAccount {
-  double _balance;
-
-  BankAccount(this._balance);
-
-  double get balance => _balance;
-
-  void deposit(double amount) {
-    _balance += amount;
+class Person {
+  String _name = '';
+  int _age = 0;
+  
+  void setName(String name) {
+    _name = name;
   }
-
-  void withdraw(double amount) {
-    if (amount <= _balance) {
-      _balance -= amount;
-    } else {
-      print('Insufficient funds');
-    }
+  
+  void setAge(int age) {
+    _age = age;
+  }
+  
+  String getName() {
+    return _name;
+  }
+  
+  int getAge() {
+    return _age;
   }
 }
 
 void main() {
-  var account = BankAccount(100.0);
-  account.deposit(50.0);
-  account.withdraw(30.0);
-  print('Balance: ${account.balance}');
+  var person = Person();
+  person.setName('John');
+  person.setAge(25);
+  print('Nama: ${person.getName()}');
+  print('Umur: ${person.getAge()}' + " tahun");
 }

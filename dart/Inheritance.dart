@@ -1,18 +1,17 @@
-// Inheritance example in Dart
-class Vehicle {
-  void move() {
-    print('Vehicle is moving');
+class Animal {
+  void eat() {
+    print('Eating');
   }
 }
 
-class Car extends Vehicle {
-  @override
-  void move() {
-    print('Car is driving');
+class Dog extends Animal {
+  void bark() {
+    print('Barking');
   }
 }
 
 void main() {
-  var car = Car();
-  car.move();
+  var dog = Dog();
+  dog.eat();
+  dog.bark();
 }

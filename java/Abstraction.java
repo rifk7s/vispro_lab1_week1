@@ -1,17 +1,17 @@
 abstract class Animal {
-    abstract void bark();
+    abstract void sound();
 }
 
 class Dog extends Animal {
     @Override
-    void bark() {
-        System.out.println("Woof");
+    void sound() {
+        System.out.println("Woof!");
     }
 }
 
 public class Abstraction {
     public static void main(String[] args) {
-        Animal animal = new Dog();
-        animal.bark();
+        var dog = new Dog();
+        dog.sound();
     }
 }
