@@ -24,5 +24,5 @@ void main() {
   person.setName('John');
   person.setAge(25);
   print('Nama: ${person.getName()}');
-  print('Umur: ${person.getAge()}' + " tahun");
+  print('Umur: ${person.getAge()} tahun');
 }
